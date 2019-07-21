@@ -1,0 +1,24 @@
+{% for item in basket_items %}
+    <div class="d-flex flex-row align-items-center">
+        <img style="height: 200px" class="mr-2 my-2 img-thumbnail width:75" src="/media/{{ item.product.image }}" 
+             alt="{{ item.product.short_desc }}">
+        <div class="mr-3">{{ item.product.category.name }}</div> 
+        <div class="mr-3">{{ item.product.name }}</div>
+        <div class="mr-3">{{ item.product.price }}&nbspруб</div>
+        <input type="number" name="{{ item.pk }}" min="0" 
+                             value="{{ item.quantity }}">
+        <div class="mr-3">{{ item.cost }}&nbspшт</div>
+        <div class="remove ml-auto mr-3 btn btn-outline-danger">
+            <a id=remove  style="text-decoration: none" href="{% url 'basket:remove' item.pk %}" class="text-dark">
+                удалить
+            </a>
+        </div>
+    </div>
+{% endfor %}
+
+{% if basket_items %}
+    <div class="">
+        В корзине {{ basket_items.0.total_quantity }} товаров общей стоимостью
+        {{ basket_items.0.total_cost }} руб
+    </div>
+{% endif %}

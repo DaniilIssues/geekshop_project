@@ -1,0 +1,21 @@
+{% extends 'basketapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="basket_list">
+    {% include 'basketapp/includes/inc_basket_list.html' %}
+</div>
+<div class="mt-2 mb-4 btn btn-success btn-round">
+    <a style="text-decoration: none" class="text-dark" href="{% url 'ordersapp:order_create' %}">
+        купить
+    </a>
+</div>
+<div class="mt-2 mb-4 btn btn-outline-primary">
+    <a style="text-decoration: none" class="text-dark" href="{% url 'main' %}">
+        на главную
+    </a>
+</div>
+
+{% endblock %}

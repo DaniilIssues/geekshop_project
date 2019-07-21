@@ -1,0 +1,14 @@
+<div class="in_navbar position-site ">
+    <a href="{% url 'products:category' 0 %}" class="link_in_nav_in_products {% if request.resolver_match.kwargs.pk == 0 %}
+                active
+              {% endif %}">
+        все
+    </a>
+    {% for link in links_menu %}
+    <a href="{% url 'products:category' link.pk %}" class="link_in_nav_in_products {% if request.resolver_match.kwargs.pk|add:'0' == link.pk %}
+                  active
+                {% endif %}">
+        {{ link.name }}
+    </a>
+    {% endfor %}
+</div>

@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHVzZXJub24=?=
+From: webmaster@localhost
+To: eavdeev@mail.com
+Date: Sun, 30 Jun 2019 11:46:17 -0000
+Message-ID: <156189517737.668.7500292042445675211@DESKTOP-66JS9DF>
+
+Для подтверждения учетной записи usernon на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/eavdeev@mail.com/2a25f31dd7ac0d38e282f897282c1022edc4a1b3/
+-------------------------------------------------------------------------------

@@ -1,0 +1,33 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+<div class="container_top">
+    <div class="details position-site">
+        <div class="links clearfix">
+            {% include 'mainapp/includes/inc_categories_menu.html' %}
+        </div>
+
+        <div class="my-5 d-flex justify-content-xl-center">
+            <div class="img-fluid">
+                <img style='width: 400px;' src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+            </div>
+
+            <div class="ml-5 d-flex flex-column">
+                <h3 class="align-self-center">{{ product.name|title }}</h3>
+                <br>
+                <h5 class="my-5 border border-warning rounded-pill align-self-center px-2 py-1"> {{ product.price }} руб</h5>
+                <a href="{% url 'basket:add' product.pk %}" class="mt-5 mb-2 btn btn-success">
+                    в корзину
+                </a>
+                <div class="description-text">
+                    {{ product.description }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clr"></div>
+</div>
+{% endblock %}

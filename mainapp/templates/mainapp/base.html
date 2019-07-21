@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/products_script.js' %}"></script>
+</head>
+{% endblock %}
+{% block header %}
+<header class="header head-standart">
+        {% include 'mainapp/includes/inc_menu.html' %}
+    
+    <p class="text_under_head position-site">{{ title|title }}</p>
+</header>
+{% endblock %}
+
+
+<body>
+    {% block container %}
+    {% endblock %}
+
+</body>
+{% block footer %}
+<footer class="footer position-site">
+    <div class="in__footer">
+        <div class="contact_us">
+            <p class="text__in__contactus">Contact us</p>
+            <p class="under_contact_us">132A Bridge Road Richmond VIC
+                Australia.</p>
+            <p class="under_contact_us">
+                Talk to us on 1300 132
+                info@interior.com</p>
+        </div>
+        <div class="userful_info mx-3">
+            <p class="text__in__contactus">Useful Information</p>
+            <div class="d-flex">
+            <div class="in_userful">
+                <a class='text-dark' href="#">Sales terms</a>
+                <a class='text-dark' href="#">Customer care</a>
+                <a class='text-dark' href="#">Delivery</a>
+            </div>
+            <div class="in_userful">
+                <a class='text-dark' href="#">Architect accounts</a>
+                <a class='text-dark' href="#">Careers</a>
+                <a class='text-dark' href="#">Exchanges & returns</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="lets_stay">
+            <p class="text__in__contactus">Let’s Stay in Touch!</p>
+            <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+            <form action="email"></form>
+        </div>
+    </div>
+    <div class="copyright position-site mt-5">
+        <p>© Copyright - INTERIOR 2016. All Rights Reserved.</p>
+        <p>Terms & Conditions / Privacy policy & Cookies</p>
+    </div>
+</footer>
+{% endblock %}
+
+</html>

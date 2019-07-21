@@ -1,0 +1,31 @@
+<ul class="menu row d-flex justify-content-center" style="list-style-type: none">
+    <li>
+        <a style="text-decoration:none" href="{% url 'main' %}" class="col">
+            на сайт
+        </a>
+    </li>
+    <li>
+        <a style="text-decoration:none" href="{% url 'admin:users' %}" class="col {% if request.resolver_match.url_name == 'users' %}
+                active
+              {% endif %}">
+            пользователи
+        </a>
+    </li>
+    <li>
+        <a style="text-decoration:none" href="{% url 'admin:categories' %}" class="col {% if request.resolver_match.url_name == 'categories' or object.name %}
+                active
+              {% endif %} ">
+            категории
+            {% if category %}
+            :<span>{{ object.name }}</span>
+            {% endif %}
+        </a>
+    </li>
+    <li>
+        <a style="text-decoration:none" href="{% url 'admin:visual_sites' %}" class="col {% if request.resolver_match.url_name == 'visual_sites' or object.name %}
+                active
+              {% endif %} ">
+            визулизация
+        </a>
+    </li>
+</ul>

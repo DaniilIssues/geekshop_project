@@ -1,0 +1,74 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block header %}
+<header class="header">
+    {% include 'mainapp/includes/inc_menu.html' %}
+    <div id="carouselExampleIndicators" class="carousel slide position-site" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            {% for object in site_visual %}
+            <div style="background-image: url(/media/{{object.image}}); height: 500px;" class="carousel-item border rounded {% if object.pk == 1 %}
+              active
+            {% endif %}">
+                <div class="h-100 position-site d-flex flex-column justify-content-center">
+                    <h1 class=''>{{object.name}}</h1>
+                    <h3 class=''>{{object.description}}</h3>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev ml-5" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only shadow">Previous</span>
+        </a>
+        <a class="carousel-control-next mr-5" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only shadow">Next</span>
+        </a>
+    </div>
+</header>
+{% endblock %}
+{% block container %}
+<div class="container_top">
+    <div class="top">
+        <div class="block_featured">
+            <p class='featured active_featured'>Featured</p>
+            <p class='featured'>New</p>
+        </div>
+        <div class="explore_all">
+            <a href="{% url 'products:index' %}" class='explore_al'>explore all</a>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="block_product">
+        {% for product in products %}
+        <div class="card mr-1" style="width: 18rem;">
+            <img src="/media/{{ product.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.description }}</p>
+                <a href="{% url 'products:product' product.pk %}" class="btn btn-primary stretched-link">Купить</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    <div class="back-img position-site">
+        <p class="mobile_app">mobile app</p>
+        <p class="find_foll">Find. Follow. Favorite.</p>
+        <p class="save_your">Save your favorites and share your style.</p>
+        <div class="google_and_apple">
+            <img src="/static/img/app-store.jpg" alt="">
+            <img src="/static/img/google-play.jpg" alt="">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+</html>

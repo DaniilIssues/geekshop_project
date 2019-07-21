@@ -1,0 +1,48 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <button class="my-2 btn btn-primary">
+      <a style="text-decoration: none" class="h5 text-dark" href="{% url 'admin:product_create' category.pk %}">
+        новый продукт
+      </a>
+    </button>
+		
+    {% for object in objects %}
+      <div style="height: 300px" class="p-2 border border-primary my-1 rounded-lg">
+        <img style="width: 200px;" class="m-3 float-left img-thumbnail mw-25" src="/media/{{object.image|default:'products_images/default.png'}}"
+          alt="{{ object.name }}">
+        <div class="product_name">
+          {{ object.name|title }}
+        </div>
+        <div class="product_actions">
+          <div class="btn btn-info">
+            <a class="text-dark" href="{% url 'admin:product_read' object.pk %}">
+              подробнее
+            </a>
+          </div>
+          <div class="btn btn-light">
+            <a class="text-dark" href="{% url 'admin:product_update' object.pk %}">
+              редактировать
+            </a>
+          </div>
+          <div class="btn btn-danger">
+            <a class="text-dark" href="{% url 'admin:product_delete' object.pk %}">
+              удалить
+            </a>
+          </div>
+        </div>
+        <div class="summary">
+          <b>цена</b>
+          <p>{{ object.price }} руб</p>
+          <b>количество</b>
+          <p>{{ object.quantity }}</p>
+        </div>
+        <div class="product_desc">
+          {{ object.short_desc|title }}
+        </div>
+      </div>
+    {% endfor%}
+  </div>
+{% endblock %}
