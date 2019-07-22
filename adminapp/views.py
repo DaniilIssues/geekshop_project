@@ -95,7 +95,7 @@ class UserDelete(DeleteView):
 
     success_url = reverse_lazy('admin:users')
 
-    @method_decorator(user_passes_test(lambda u: u.is_superuser)))
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         self.object.is_active = False
