@@ -123,5 +123,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-.idea
+.idea/
 django2/

@@ -3,7 +3,7 @@ from authapp.models import ShopUser
 from mainapp.models import Product, ProductCategory, VisualModels
 
 from django.shortcuts import HttpResponseRedirect, get_object_or_404, render
-from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.decorators import user_passes_test, login_required
 from django.urls import reverse_lazy, reverse
 from django.views.generic.list import ListView
 from django.utils.decorators import method_decorator
@@ -15,6 +15,10 @@ class VisualSite(ListView):
     model = VisualModels
     template_name = 'adminapp/visualisation.html'
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(VisualSite, self).dispatch(*args, **kwargs)
+
 
 class VisualSiteCreate(CreateView):
     model = VisualModels
@@ -23,12 +27,20 @@ class VisualSiteCreate(CreateView):
     success_url = reverse_lazy('admin:visual_sites')
     fields = '__all__'
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(VisualSiteCreate, self).dispatch(*args, **kwargs)
+
 
 class VisualSiteUpdate(UpdateView):
     model = VisualModels
     template_name = 'adminapp/visualisation_update.html'
     success_url = reverse_lazy('admin:visual_sites')
     fields = '__all__'
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(VisualSiteUpdate, self).dispatch(*args, **kwargs)
 
 
 class VisualSiteDelete(DeleteView):
@@ -37,6 +49,7 @@ class VisualSiteDelete(DeleteView):
 
     success_url = reverse_lazy('admin:visual_sites')
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         self.object.is_active = False
@@ -47,9 +60,9 @@ class UsersList(ListView):
     model = ShopUser
     template_name = 'adminapp/users.html'
 
-    # @method_decorator(user_passes_test(lambda u: u.is_superuser))
-    # def dispatch(self, *args, **kwargs):
-    #     return super().dispatch(*args, **kwargs)
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(UsersList, self).dispatch(*args, **kwargs)
 
 
 class UserCreate(CreateView):
@@ -59,6 +72,10 @@ class UserCreate(CreateView):
     success_url = reverse_lazy('admin:categories')
     fields = '__all__'
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(UserCreate, self).dispatch(*args, **kwargs)
+
 
 class UserUpdate(UpdateView):
     model = ShopUser
@@ -67,6 +84,10 @@ class UserUpdate(UpdateView):
     success_url = reverse_lazy('admin:categories')
     fields = '__all__'
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(UserUpdate, self).dispatch(*args, **kwargs)
+
 
 class UserDelete(DeleteView):
     model = ShopUser
@@ -74,17 +95,22 @@ class UserDelete(DeleteView):
 
     success_url = reverse_lazy('admin:users')
 
-    # def delete(self, request, *args, **kwargs):
-    #     self.object = self.get_object()
-    #     self.object.is_active = False
-    #     self.object.save()
-    #
-    #     return HttpResponseRedirect(self.get_success_url())
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.is_active = False
+        self.object.save()
+
+        return HttpResponseRedirect(self.get_success_url())
 
 
 class ProductCategoryList(ListView):
     model = ProductCategory
     template_name = 'adminapp/categories.html'
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(ProductCategoryList, self).dispatch(*args, **kwargs)
 
 
 class ProductCategoryCreate(CreateView):
@@ -93,6 +119,10 @@ class ProductCategoryCreate(CreateView):
 
     success_url = reverse_lazy('admin:categories')
     fields = '__all__'
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(ProductCategoryCreate, self).dispatch(*args, **kwargs)
 
 
 class ProductCategoryUpdate(UpdateView):
@@ -107,19 +137,24 @@ class ProductCategoryUpdate(UpdateView):
 
         return context
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(ProductCategoryUpdate, self).dispatch(*args, **kwargs)
+
 
 class ProductCategoryDelete(DeleteView):
     model = ProductCategory
     template_name = 'adminapp/category_delete.html'
     success_url = reverse_lazy('admin:categories')
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         self.object.is_active = False
         self.object.save()
         return HttpResponseRedirect(self.get_success_url())
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def products(request, pk):
     title = 'админка/продукт'
 
@@ -134,7 +169,7 @@ def products(request, pk):
 
     return render(request, 'adminapp/products.html', content)
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def product_create(request, pk):
     title = 'продукт/создание'
     category = get_object_or_404(ProductCategory, pk=pk)
@@ -159,6 +194,10 @@ class ProductDetail(DetailView):
     model = Product
     template_name = 'adminapp/product_read.html'
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(ProductDetail, self).dispatch(*args, **kwargs)
+
 
 class ProductUpdate(UpdateView):
     model = Product
@@ -173,6 +212,9 @@ class ProductUpdate(UpdateView):
 
         return context
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super(ProductUpdate, self).dispatch(*args, **kwargs)
 
 class ProductDelete(DeleteView):
     model = Product
@@ -180,6 +222,7 @@ class ProductDelete(DeleteView):
 
     success_url = reverse_lazy('admin:products')
 
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         self.object.is_active = False

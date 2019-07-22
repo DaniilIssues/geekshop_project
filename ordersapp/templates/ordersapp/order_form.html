@@ -1,5 +1,6 @@
 {% extends "ordersapp/base.html" %}
 {% load static %}
+{% load cache %}
 
 {% block content %}
 {% include 'ordersapp/includes/inc_order_summary.html' %}
@@ -12,13 +13,13 @@
             {% for form in orderitems.forms %}
             {% if forloop.first %}
             <thead>
-                <tr>
-                    {% for field in form.visible_fields %}
-                    <th class="{% cycle 'td1' 'td2' 'td3' %} order formset_td">
-                        {{ field.label|capfirst }}
-                    </th>
-                    {% endfor %}
-                </tr>
+            <tr>
+                {% for field in form.visible_fields %}
+                <th class="{% cycle 'td1' 'td2' 'td3' %} order formset_td">
+                    {{ field.label|capfirst }}
+                </th>
+                {% endfor %}
+            </tr>
             </thead>
             {% endif %}
             <tr class="formset_row">
@@ -31,7 +32,13 @@
                     {% endif %}
                     {{ field.errors.as_ul }}
                     {% if field.name != 'price' %}
+                    {% if field.name == 'product' %}
+                    {% cache 3600 orderitemform_product field.value %}
                     {{ field }}
+                    {% endcache %}
+                    {% else %}
+                    {{ field }}
+                    {% endif %}
                     {% else %}
                     {% if field.value %}
                     <span class="orderitems-{{forloop.parentloop.counter0}}-price">

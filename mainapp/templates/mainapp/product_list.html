@@ -1,38 +1,9 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 {% block container %}
-{% include 'mainapp/includes/inc_categories_menu.html' %}
-<div class="block_in_products position-site">
-    <div class="title clearfix">
-        <h2>Категория: "{{ category.name|title }}"</h2>
-    </div>
-    <div class="d-flex justify-content-center flex-wrap clearfix">
-        {% for product in products %}
-        <div class="mr-4 mt-4 card" style="width: 18rem;">
-            <img src="/media/{{ product.image }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
-                <p class="card-text">{{product.description}}</p>
-                <a href="{% url 'products:product' product.pk %}" class="btn btn-primary stretched-link">купить</a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    <div class="paginator">
-        {% if products.has_previous %}
-        <a href="{% url 'products:page' category.pk products.previous_page_number %}">
-            < </a> {% endif %} <span class="current">
-                страница {{ products.number }} из
-                {{ products.paginator.num_pages }}
-                </span>
-                {% if products.has_next %}
-                <a id="next" href="{% url 'products:page' category.pk products.next_page_number %}">
-                    >
-                </a>
-                {% endif %}
-    </div>
-    <div>
-        <a class="refresh" href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
-    </div>
+<div class="details">
+    {% include 'mainapp/includes/inc_products_list_content.html' %}
 </div>
+
+<div class="clr"></div>
 {% endblock %}
