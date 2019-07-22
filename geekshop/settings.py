@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'geekshop.urls'
@@ -202,15 +204,15 @@ GRAPH_MODELS = {
 }
 
 if os.name == 'posix':
-   CACHE_MIDDLEWARE_ALIAS = 'default'
-   CACHE_MIDDLEWARE_SECONDS = 120
-   CACHE_MIDDLEWARE_KEY_PREFIX = 'geekshop'
+    CACHE_MIDDLEWARE_ALIAS = 'default'
+    CACHE_MIDDLEWARE_SECONDS = 120
+    CACHE_MIDDLEWARE_KEY_PREFIX = 'geekshop'
 
-   CACHES = {
-       'default': {
-           'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-           'LOCATION': '127.0.0.1:11211',
-       }
-   }
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+            'LOCATION': '127.0.0.1:11211',
+        }
+    }
 
 LOW_CACHE = True

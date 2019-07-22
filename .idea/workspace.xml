@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="740a4b3d-d467-416b-be5c-465493a53663" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_products_list_content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/main_scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/product_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +19,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/geekshop/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -39,7 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/urls.txt" />
         <option value="$PROJECT_DIR$/adminapp/views.py" />
         <option value="$PROJECT_DIR$/mainapp/context_processors.py" />
@@ -49,10 +59,16 @@
         <option value="$PROJECT_DIR$/basketapp/models.py" />
         <option value="$PROJECT_DIR$/ordersapp/models.py" />
         <option value="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_summary.html" />
-        <option value="$PROJECT_DIR$/geekshop/settings.py" />
         <option value="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_menu.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/product_list.html" />
+        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/inc_products_list_content.html" />
+        <option value="$PROJECT_DIR$/mainapp/urls.py" />
+        <option value="$PROJECT_DIR$/static/js/main_scripts.js" />
+        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" />
         <option value="$PROJECT_DIR$/mainapp/views.py" />
+        <option value="$PROJECT_DIR$/geekshop/settings.py" />
       </list>
     </option>
   </component>
@@ -62,7 +78,9 @@
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -78,46 +96,18 @@
             <path>
               <item name="geekshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="geekshop" type="462c0819:PsiDirectoryNode" />
-              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="geekshop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="geekshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="geekshop" type="462c0819:PsiDirectoryNode" />
-              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="geekshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="geekshop" type="462c0819:PsiDirectoryNode" />
-              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="geekshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="geekshop" type="462c0819:PsiDirectoryNode" />
-              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="geekshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="geekshop" type="462c0819:PsiDirectoryNode" />
-              <item name="ordersapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="geekshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="geekshop" type="462c0819:PsiDirectoryNode" />
-              <item name="ordersapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="geekshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="geekshop" type="462c0819:PsiDirectoryNode" />
-              <item name="ordersapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="ordersapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -128,6 +118,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work files\Django\geekshop\mainapp\templates\mainapp\includes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -208,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563788206030</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Кеширование контроллеров и лоу кэш">
+      <created>1563790911697</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563790911697</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -223,8 +225,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24968314" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24968314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -234,8 +237,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32974428" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32974428" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -335,13 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="122" column="19" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -423,13 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geekshop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="215" column="16" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ordersapp/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -444,9 +433,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/basketapp/templates/basketapp/basket.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/base.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_menu.html">
@@ -466,20 +452,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="175" column="17" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="103" lean-forward="true" selection-start-line="13" selection-start-column="103" selection-end-line="13" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_products_list_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/product_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main_scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="177" column="12" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geekshop/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
         </state>
       </provider>
     </entry>
